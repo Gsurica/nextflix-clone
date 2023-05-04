@@ -9,11 +9,16 @@ const ButtonAppBar = () => {
     <Box sx={{
       flexGrow: 1,
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      position: 'relative'
     }}>
-      <AppBar position="static" sx={{
+      <AppBar position='fixed' sx={{
         backgroundColor: 'transparent',
         width: '1120px',
+        zIndex: 999,
+        margin: '10px auto',
+        left: 0,
+        right: 0,
       }}>
         <Toolbar sx={{
           display: 'flex',
@@ -23,7 +28,7 @@ const ButtonAppBar = () => {
           <Typography 
             variant="h4" 
             component="div" 
-            color='black'
+            color='red'
           >
             Grow Dev
           </Typography>
@@ -32,7 +37,7 @@ const ButtonAppBar = () => {
           }}>
             <Box>
               <Button 
-                color="primary"
+                color="error"
                 variant="contained"
               >
                 Logar
@@ -44,7 +49,7 @@ const ButtonAppBar = () => {
               }}
             >
               <Button
-                color="primary"
+                color="error"
                 variant="contained"
               >
                 Entrar
