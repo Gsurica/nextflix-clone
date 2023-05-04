@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './Pages/Home'
+import { ButtonAppBar } from './config/components/AppBar'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
+      <ButtonAppBar />
       <Routes>
         <Route path='/home' element={ <Home /> } />
         <Route path='*' element={ <Navigate to='/home' /> } />
@@ -12,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export { App }
