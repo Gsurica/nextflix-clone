@@ -1,8 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import GrowdevLogo from '../../../assets/images/growdev.png';
 
 const ButtonAppBar = () => {
   return (
@@ -25,13 +25,15 @@ const ButtonAppBar = () => {
           justifyContent: 'space-between',
           alignContent: 'center'
         }}>
-          <Typography 
-            variant="h4" 
-            component="div" 
-            color='red'
+          <Box 
+            sx={{
+              width: '500px',
+              backgroundImage: `url(${GrowdevLogo})`,
+              backgroundRepeat: 'no-repeat',
+              height: '80px'
+            }}
           >
-            Grow Dev
-          </Typography>
+          </Box>
           <Box sx={{
             display: 'flex'
           }}>
@@ -40,7 +42,7 @@ const ButtonAppBar = () => {
                 color="error"
                 variant="contained"
               >
-                Logar
+                Sair
               </Button>
             </Box>
             <Box
