@@ -1,21 +1,24 @@
 import { Typography } from '@mui/material'
+import { SxProps, Theme } from '@mui/material'
 
-export interface ITitle {
+export interface IText {
     variant: 'body1' | 'body2' | 'button' | 'caption' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'inherit' | 'overline' | 'subtitle1' | 'subtitle2';
     children?: React.ReactNode,
-    component?: any
+    component?: any,
+    sx?: SxProps<Theme> | undefined
 }
 
-const Title: React.FC<ITitle> = ({children, variant, component}) => {
+const Text: React.FC<IText> = ({children, variant, component, sx}) => {
     return (
         <Typography 
           variant={variant}
           component={component}
           color={'white'}
+          sx={sx}
         >
            {children}
         </Typography>
     )
 }
 
-export default Title;
+export default Text;
